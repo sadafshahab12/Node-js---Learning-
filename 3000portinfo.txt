@@ -1,0 +1,17 @@
+Dost, imagine tum ek restaurant ke owner ho!
+
+Tumhare restaurant mein kai tables hain, aur har table ka ek specific number hai. Jab koi customer tumhare restaurant mein aata hai, toh tum unhein ek table assign karte ho.
+
+Ab, internet par, har computer ko ek specific address milta hai, jise hum IP address kehte hain. Aur har IP address ke saath, kai ports hote hain, jo ki different services ke liye use hote hain.
+
+Jab tum Node.js mein ek server create karte ho, toh tumhein ek port number specify karna hota hai. Yeh port number tumhare server ko identify karta hai, aur internet par tumhare server ko access karne ke liye use hota hai.
+
+3000 port number ka use karna ek common practice hai, kyunki:
+
+1. *Yeh port number reserved nahin hai*: Kuch port numbers, jaise ki 80 aur 443, reserved hote hain for specific services, jaise ki HTTP aur HTTPS. 3000 port number reserved nahin hai, toh tum iska use kar sakte ho.
+2. *Yeh port number easily available hai*: 3000 port number ka use karna easy hai, kyunki yeh port number usually available hota hai.
+3. *Yeh port number development ke liye suitable hai*: 3000 port number development ke liye suitable hai, kyunki yeh port number tumhare local machine par easily access kiya ja sakta hai.
+
+Toh, dost, jab tum Node.js mein ek server create karte ho, toh 3000 port number ka use karna ek common practice hai!
+
+Kya tumhein yeh explanation samajh aaya, dost?

@@ -1,0 +1,18 @@
+request and response
+Event loop --> node js works on single thread like process--> not multitasking
+
+request --> event queue line --> evetn loop take request 1 by one  --> sometimes when there will be time taking request it throw the request towards the thread pool. it will be done by call backs
+
+how to exit from event loop 
+process.exit() // loop will stop
+
+request object --> req.url , req.method, req.headers 
+
+now, 
+response method 
+how to send response?
+setHeader means which type of data we are given like html
+
+routing request 
+
+
