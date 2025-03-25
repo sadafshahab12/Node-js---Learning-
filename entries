@@ -1,0 +1,22 @@
+When you call .entries() on an array, it returns an iterator that produces an array of two elements for each iteration:
+
+1. Key (or index): The index of the element in the array.
+2. Value: The value of the element at that index.
+
+Here's an example:
+
+const arr = ['apple', 'banana', 'cherry'];
+
+const entries = arr.entries();
+
+console.log(entries.next().value); // [0, 'apple']
+console.log(entries.next().value); // [1, 'banana']
+console.log(entries.next().value); // [2, 'cherry']
+
+As you can see, .entries() returns an iterator that produces an array with the index and value of each element.
+
+You can also use .entries() with for...of loops or spread operators to iterate over the key-value pairs:
+
+for (const [index, value] of arr.entries()) {
+  console.log(`Index: ${index}, Value: ${value}`);
+}
