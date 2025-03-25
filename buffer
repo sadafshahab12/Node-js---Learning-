@@ -1,0 +1,3 @@
+- A buffer is like a temporary storage box.
+- When we receive chunks of data, we store them in a buffer until we have all the chunks.
+- Once we have all the chunks, we can put them together to get the original data.

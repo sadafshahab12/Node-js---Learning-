@@ -1,0 +1,12 @@
+It's a way to handle data that's too large to fit into memory or that's being generated or consumed in real-time.
+
+Think of a stream like a pipe: you pour data in one end, and it comes out the other end, piece by piece. This allows you to process data in chunks, without having to load the entire dataset into memory at once.
+
+Streams are useful for a wide range of tasks, such as:
+
+- Reading and writing files
+- Handling network requests and responses
+- Processing large datasets
+- Creating real-time data pipelines
+
+Duplex streams: These streams are both readable and writable, allowing you to read and write data simultaneously.
