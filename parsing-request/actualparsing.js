@@ -36,14 +36,14 @@ const requestHandler = (req, res) => {
     });
     // next event when chunk end
     //chunk received and store in body
-    req.on("end", () => {
+    req.on("end", () => { // chunk received
       //receive signal on receiving complete data // extract full body of data after receiving complete chunk
       const fullBodyData = Buffer.concat(body).toString();
       console.log(fullBodyData);
       const params = new URLSearchParams(fullBodyData); // parse the body through this urlsearchparams
       //   const bodyObj = {};
       //   for (const [key, val] of params.entries()) {
-      //     //after extracting we have to store it , it is receiving in object form key value pair so we store it in empty object
+      //   after extracting we have to store it , it is receiving in object form key value pair so we store it in empty object
       //     bodyObj[key] = val;
       //   }
       const bodyObj = Object.fromEntries(params); // after parse make object
