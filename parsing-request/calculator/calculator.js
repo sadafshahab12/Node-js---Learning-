@@ -41,6 +41,4 @@ server.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}`);
 });
 
-function sum(num1, num2) {
-  return num1 + num2;
-}
+
