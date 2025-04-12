@@ -33,7 +33,7 @@ app.get("/contact", (req, res, next) => {
     `);
 });
 
-app.use(bodyParser.urlencoded());  // do all chunk work and parse the data receive from user
+app.use(bodyParser.urlencoded());  // do all chunk work and parse the data receive from user 
 app.post("/contact", (req, res, next) => {
   console.log(
     "Handling /contact for POST method: ",
