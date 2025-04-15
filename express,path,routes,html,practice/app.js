@@ -11,9 +11,8 @@ app.use((req, res, next) => {
   console.log("get request url: ", req.url, req.method);
   next();
 });
-app.use(homeRouter);
 app.use(express.urlencoded());
-app.use(contactRouter);
+app.use(homeRouter);
 app.use(contactRouter);
 app.use((req, res, next) => {
   res.status(404).sendFile(path.join(rootDir, "views", "404.html"));
