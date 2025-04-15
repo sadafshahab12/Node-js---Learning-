@@ -20,7 +20,7 @@ app.get("/", (req, res, next) => {
     <a href="/contact"> Contact us </a>
     `);
 });
-app.use(express.urlencoded())
+
 app.get("/contact", (req, res, next) => {
   console.log("Handling /contact for get method: ", req.url, req.method);
   res.send(`<h1>Welcome to contact page</h1>
@@ -33,7 +33,6 @@ app.get("/contact", (req, res, next) => {
 });
 app.post("/contact", (req, res, next) => {
   console.log("Handling /contact for POST method: ", req.url, req.method);
-  console.log(req.body)
   res.send("<h2>Your form has been submitted</h2>");
 });
 const PORT = 3000;
