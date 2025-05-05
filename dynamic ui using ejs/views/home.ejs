@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- <link rel="stylesheet" href="/styling.css"> -->
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="font-bold text-4xl py-4 text-center text-red-700">
+      Welcome to My Ecommerce Website
+    </h1>
+    <a
+      href="/contact"
+      class="bg-red-700 text-2xl text-white rounded-lg py-3 px-8"
+    >
+      Contact us
+    </a>
+
+    <h1>Here is my added book</h1>
+    <ul>
+      <% addedBooks.forEach((book)=>{ %>
+      <li><%= book.bookname %></li>
+      <li><%= book.bookDetails.author%></li>
+      <li><%= book.bookDetails.price %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
