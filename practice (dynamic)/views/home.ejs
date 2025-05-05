@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <h1>Welcome to task manager app</h1>
+    <a href="/add-task">Add Task</a>
+
+    <h1>tasks:</h1>
+    <% tasks.forEach((task)=>{%>
+    <li><%= task.task %></li>
+    <%}) %>
+  </body>
+</html>
