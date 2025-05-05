@@ -1,0 +1,10 @@
+<%- include('partials/head') %>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <form action="/add-task" method="POST" class="flex flex-col items-center justify-center h-screen bg-slate-200 gap-4">
+      <input type="text" name="task" id="task" placeholder="Enter Your Task" class="border outline-none border-slate-700 py-2 px-4 rounded-md w-full max-w-60" />
+      <button class="bg-slate-700 py-2 px-4 rounded-md text-white w-full max-w-60">Submit</button>
+    </form>
+  </body>
+</html>

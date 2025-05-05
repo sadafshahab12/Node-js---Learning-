@@ -33,6 +33,8 @@ app.use((req, res, next) => {
 app.use(express.urlencoded());
 app.use(homeRouter);
 app.use(taskFormRouter);
+
+app.use(express.static("public"));
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port: http://localhost:${PORT}`);

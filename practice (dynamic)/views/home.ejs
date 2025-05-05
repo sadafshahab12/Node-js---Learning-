@@ -1,17 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Manager</title>
+<%- include('partials/head') %>
   </head>
   <body>
-    <h1>Welcome to task manager app</h1>
-    <a href="/add-task">Add Task</a>
+    <%- include('partials/header') %>
+    <div
+      class="flex flex-col items-center justify-center h-screen bg-slate-200"
+    >
+      <h1 class="text-2xl font-bold py-4">Welcome to task manager app</h1>
+      <a href="/add-task" class="bg-slate-700 py-2 px-4 rounded-md text-white"
+        >Add Task</a
+      >
+    </div>
 
-    <h1>tasks:</h1>
-    <% tasks.forEach((task)=>{%>
-    <li><%= task.task %></li>
-    <%}) %>
+    <h1 class="text-center bg-slate-900 text-2xl text-white py-8 font-bold">
+      Your Tasks
+    </h1>
+    <div class="grid grid-cols-3 gap-4 py-8 px-4">
+      <% tasks.forEach((task)=>{%>
+        <div class="text-center bg-slate-100 p-4 border border-slate-300 rounded-md">
+          <li class=" text-slate-800 text-lg list-none"><%= task.task %></li>
+        <div class="flex justify-center gap-4 py-4">
+      <button class="bg-slate-700 py-2 px-4 rounded-md text-white text-sm">Edit</button>
+      <button class="bg-slate-700 py-2 px-4 rounded-md text-white text-sm">
+        Delete
+      </button>
+    </div>
+  </div>
+  <%}) %>
+</div>
   </body>
 </html>
