@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
-  "author": "",
+  "author": "Sadaf Shahab",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "@tailwindcss/cli -i ./views/input.css -o ./public/output.css --watch",
-    "start": "nodemon app.js & npm run tailwind"
+    "tailwind": "npx @tailwindcss/cli -i ./views/input.css -o ./public/output.css --watch",
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.5",

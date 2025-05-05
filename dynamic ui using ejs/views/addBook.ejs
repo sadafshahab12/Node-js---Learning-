@@ -1,0 +1,14 @@
+<%- include("partials/head") %>
+</head>
+  <body>
+    <%- include("partials/header") %>
+    <h1 class="py-4 text-center text-3xl">Add Book</h1>
+    <form action="/add-book" method="POST" class="space-y-4 px-10 py-4">
+      <input type="text" placeholder="Enter Book Name" name="bookname" class="input" />
+      <input type="text" placeholder="Book Author" name="author" class="input"/>
+      <input type="text" placeholder="Book Image Url" name="imageUrl" class="input"/>
+      <input type="number" placeholder="Book Price" name="price"  class="input"/>
+      <input type="submit" value="Submit" class="button" />
+    </form>
+  </body>
+</html>
