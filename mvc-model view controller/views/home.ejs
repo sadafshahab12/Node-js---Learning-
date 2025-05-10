@@ -1,0 +1,29 @@
+<%- include("partials/head") %>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+    <h1 class="font-bold text-4xl py-4 text-center text-red-700">
+      Welcome to My Ecommerce Website
+    </h1>
+    <button class="mx-auto block my-4">
+      <a
+      href="/add-book"
+      class="bg-red-500 text-lg text-white rounded-md py-2 px-4 cursor-pointer hover:bg-red-800"
+      >
+      Add Book
+    </a>
+  </button>
+    <h1 class="text-center font-bold text-xl text-gray-600">My Book</h1>
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 py-4 gap-4 px-10">
+      <% addedBooks.forEach((book)=>{ %>
+        <div class="border border-gray-300 rounded-md shadow-md flex flex-col items-center p-4 space-y-2">
+          <li class="text-xl font-bold "><%= book.bookDetails.bookname %></li>
+          <img src="<%= book.bookDetails.imageUrl %>" class="text-xl font-bold w-75 h-100 object-cover " />
+          <li class="text-lg font-semibold underline"><%= book.bookDetails.author%></li>
+          <li class="text-2xl font-black">$<%= book.bookDetails.price %></li>
+          <button class="button">Add to Cart</button>
+        </div>
+          <% }) %>
+    </ul>
+  </body>
+</html>
