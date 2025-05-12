@@ -1,5 +1,7 @@
-import express  from "express";
-
+import express from "express";
+import {homeController} from "../controller/home.js";
 const homeRouter = express.Router();
 
-homeRouter.get("/", )
+homeRouter.get("/", homeController);
+
+export { homeRouter };

@@ -1,3 +1,5 @@
-const home = (req, res)=>{
-  res.render("")
-}
+export const homeController = (req, res) => {
+  res.render("home", { title: "Home" });
+};
+
+

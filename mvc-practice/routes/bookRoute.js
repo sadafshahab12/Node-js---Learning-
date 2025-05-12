@@ -1,11 +1,12 @@
 import express from "express";
+import {
+  addBookController,
+  addBookPostController,
+} from "../controller/addBook.js";
+
 const bookRouter = express.Router();
 
-bookRouter.get("/books", (req, res, next)=>{
+bookRouter.get("/books", addBookController);
 
-})
-
-bookRouter.post("/books", (req, res, next)=>{
-  
-})
-export {bookRouter};
+bookRouter.post("/books", addBookPostController);
+export { bookRouter };

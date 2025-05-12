@@ -1,0 +1,26 @@
+<%- include("partials/titleName")%>
+</head>
+<body>
+  <h1>Add Book</h1>
+
+  <form action="/books" method="POST">
+    <input type="text" name="title" placeholder="Book Title" required />
+    <input type="text" name="author" placeholder="Book Author" required />
+    <input type="text" name="image" placeholder="Book Image URL" required />
+    <input type="text" name="description" placeholder="Book Description" required />
+    <input type="number" name="price" placeholder="Book Price" required />
+    <button type="submit">Add Book</button>
+  </form>
+
+  <h1>My Book</h1>
+  <% addBook.forEach((book)=>{ %>
+  <div>
+<h1><%= book.title %></h1>
+<p><%= book.price %></p>
+<p><%= book.description %></p>
+<p><%= book.author %></p>
+<img src="<%= book.image %>" alt="<%= book.title %>" />
+  </div>
+<%})%>
+</body>
+</html>
