@@ -13,7 +13,7 @@ export class AddBooks {
   save() {
     AddBooks.fetchAll((addBook) => {
       addBook.push(this);
-      const addBookPath = path.join(rootDir, "data", "books.json");
+      const addBookPath = path.join(rootDir, "data", "book.json");
       fs.writeFile(addBookPath, JSON.stringify(addBook), (error) => {
         console.log(`File writing concluded: ${error}`);
       });
@@ -21,7 +21,7 @@ export class AddBooks {
   }
 
   static fetchAll(callback) {
-    const addBookPath = path.join(rootDir, "data", "books.json");
+    const addBookPath = path.join(rootDir, "data", "book.json");
     fs.readFile(addBookPath, (error, data) => {
         console.log(`File Read: ${error} ${data}`);
       if (!error) {
