@@ -10,7 +10,7 @@ module.exports = class AddNewBook {
     this.price = bookPrice;
   }
   saveBookInFile() {
-    AddNewBook.fetchAll((addNewBook) => {
+    AddNewBook.fetchAllDataFromFile((addNewBook) => {
       addNewBook.push(this);
       const bookDataPath = path.join(rootDir, "bookdata", "bookData.json");
       console.log(rootDir)
@@ -19,9 +19,9 @@ module.exports = class AddNewBook {
       });
     });
   }
-  static fetchAll(callback) {
+  static fetchAllDataFromFile(callback) {
     // extract all data from file
-    const bookDataPath = path.join(rootDir, "bookata", "bookData.json");
+    const bookDataPath = path.join(rootDir, "bookdata", "bookData.json");
     console.log(bookDataPath);
 
     fs.readFile(bookDataPath, (error, data) => {

@@ -1,7 +1,8 @@
-const { AddBooks } = require("../../mvc-practice/model/books");
+const AddNewBook = require("../model/addNewBook");
+
 
 exports.bookController = (req, res, next) => {
-  AddBooks.fetchAll((addNewBook) => {
+  AddNewBook.fetchAllDataFromFile((addNewBook) => {
     res.render("books", { addNewBook, title: "Books" });
   });
 };

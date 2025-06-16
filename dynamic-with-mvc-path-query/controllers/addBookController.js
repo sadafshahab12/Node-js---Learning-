@@ -1,4 +1,4 @@
-const { AddBooks } = require("../../mvc-practice/model/books");
+const AddNewBook = require("../model/addNewBook");
 
 exports.getAddBook = (req, res, next) => {
   res.render("addBook", { title: "Add Book" });
@@ -7,8 +7,7 @@ exports.getAddBook = (req, res, next) => {
 exports.postAddBook = (req, res, next) => {
   const { name, author, image, price } = req.body;
 
-  const bookData = new AddBooks(name, author, image, price);
-  console.log(bookData);
-  bookData.save();
+  const bookData = new AddNewBook(name, author, image, price);
+  bookData.saveBookInFile();
   res.render("success", { title: "Success Message" });
 };
