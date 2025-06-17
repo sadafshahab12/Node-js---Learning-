@@ -1,7 +1,7 @@
 const AddNewBook = require("../model/addNewBook");
 
 exports.getAddBook = (req, res, next) => {
-  res.render("addBook", { title: "Add Book" });
+  res.render("admin/addBook", { title: "Add Book" });
 };
 
 exports.postAddBook = (req, res, next) => {
@@ -9,5 +9,5 @@ exports.postAddBook = (req, res, next) => {
 
   const bookData = new AddNewBook(name, author, image, price);
   bookData.saveBookInFile();
-  res.render("success", { title: "Success Message" });
+  res.render("admin/success", { title: "Success Message" });
 };
