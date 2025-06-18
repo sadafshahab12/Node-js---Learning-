@@ -1,7 +1,7 @@
-const AddNewBook = require("../model/addNewBook");
+const AddNewBook = require("../../model/addNewBook");
 
 exports.getAddBook = (req, res, next) => {
-  res.render("admin/addBook", { title: "Add Book" });
+  res.render("admin/addBook", { title: "Add Book", currentPage: "Add Book" });
 };
 
 exports.postAddBook = (req, res, next) => {

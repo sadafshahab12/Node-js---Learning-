@@ -2,9 +2,10 @@ const express = require("express");
 const homeRouter = require("./routes/homeRoute");
 const addBookRoute = require("./routes/addBookRoute");
 const { notFoundController } = require("./controllers/notFoundController");
-const bookRouter = require("./routes/booksRoute");
 const path = require("path");
 const rootDir = require("./utils/path_utils");
+const myOrderRoute = require("./routes/myOrderRoute");
+const bookListRouter = require("./routes/bookListRoute");
 
 const app = express();
 
@@ -20,9 +21,9 @@ app.use(express.static(path.join(rootDir, "public")));
 app.use(express.urlencoded());
 app.use(homeRouter);
 app.use(addBookRoute);
-app.use(bookRouter);
+app.use(bookListRouter);
+app.use(myOrderRoute);
 app.use(notFoundController);
-
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

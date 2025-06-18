@@ -1,3 +1,3 @@
-exports.homeController = (req, res, next) =>{
-    res.render("home" , {title : "Home"})
-}
+exports.homeController = (req, res, next) => {
+  res.render("index", { title: "Home", currentPage: "Home" });
+};
