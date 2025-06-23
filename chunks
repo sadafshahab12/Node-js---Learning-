@@ -2,5 +2,5 @@ Imagine you have a big box of toys, and you want to send it to your friend. But,
 
 When we send data (like a file or a message) over the internet, we break it down into smaller chunks.
 
-Each chunk is sent separately, and then the receiver puts all the chunks together to get the original data.
+Each chunk is sent separately, and then the receiver puts all the chunks together to get the original data. 
 
